@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+@import "font-awesome";
+
+// media queli
+$pc: 1024px; // PC
+$tab: 680px; // tablet
+$sp: 480px;  // smartphone
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+      @content;
+    }
+  }
+@mixin tab {
+    @media (max-width: ($tab)) {
+      @content;
+    }
+  }
+@mixin sp {
+    @media (max-width: ($sp)) {
+      @content;
+    }
+}
