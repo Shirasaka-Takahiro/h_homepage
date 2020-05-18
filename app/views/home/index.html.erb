@@ -1,9 +1,1 @@
 <h1>Welcome</h1>
-<h1>作品一覧</h1>
-  <div class="work_lists">
-    <% @works.each do |work| %>
-      <%= "#{work.title}" %>
-      <%= "#{work.description}" %>
-      <%= link_to "詳細", work_path(work.id), class: 'btn' %>
-    <% end %>
-  </div>  
