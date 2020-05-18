@@ -1,2 +1,6 @@
 <h1>Galleries#show</h1>
-<p>Find me in app/views/galleries/show.html.erb</p>
+<h1>作品詳細</h1>
+<%= link_to '作品一覧へ', galleries_path, class: 'btn btn-primary' %>
+<%= @gallery.id %>
+<%= @gallery.title %>
+<%= @gallery.content %>
