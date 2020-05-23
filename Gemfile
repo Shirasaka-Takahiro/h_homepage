@@ -71,3 +71,6 @@ gem 'font-awesome-rails'
 gem "loofah", ">= 2.3.1"
 gem 'faker'
 gem 'dotenv-rails'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'fog-aws'

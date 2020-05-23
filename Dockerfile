@@ -2,7 +2,8 @@ From ruby:2.5.3
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
     && apt-get install -y nodejs \ 
-                          build-essential
+                          build-essential \
+                          imagemagick
 
 Run mkdir /app_name
 

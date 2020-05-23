@@ -1,5 +1,8 @@
 <h1>Galleries#index</h1>
 <div>作品一覧</div>
-<% @galleries.each do |gallery| %>
-  <%= link_to gallery.title, gallery_path(gallery.id) %>
-<% end %>
+<div class="gallery">
+  <% @galleries.each do |gallery| %>
+    <%= image_tag gallery.image.thumb300.url.to_s, class: 'image' %>
+    <%= link_to gallery.title, gallery_path(gallery.id) %>
+  <% end %>
+</div>
