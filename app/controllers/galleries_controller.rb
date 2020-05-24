@@ -4,7 +4,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @gallery = Gallery.find_by(params[:id])
+    @gallery = Gallery.find(params[:id])
   end
 
   def new
@@ -39,7 +39,7 @@ class GalleriesController < ApplicationController
   private
   
   def gallery_params
-    params.require(:gallery).permit(:title, :content, :image)
+    params.require(:gallery).permit(:title, :content, :image, category_ids: [])
   end
 
 end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do  
 
+  get 'categories/new'
+  get 'categories/show'
   resources :galleries  
 
   root 'home#index'
