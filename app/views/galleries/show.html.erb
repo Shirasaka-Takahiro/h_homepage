@@ -1,0 +1,12 @@
+<h1>Galleries#show</h1>
+<h1>作品詳細</h1>
+<%= link_to '作品一覧へ', galleries_path, class: 'btn btn-primary' %>
+<%= @gallery.id %>
+<%= @gallery.title %>
+<%= @gallery.content %>
+<% @gallery.categories.each do |category| %>
+  <%= category.name %>
+<% end %>
+<%= image_tag @gallery.image_url, class: "image" %>
+<%= link_to "削除", @gallery, method: :delete, data:{ confirm: "削除してもよろしいですか？" }, class: "btn btn-danger" %>
+<%= link_to "編集", edit_gallery_path(@gallery), class: "btn btn-success" %>

@@ -1,0 +1,10 @@
+<h1>Galleries#index</h1>
+<div>作品一覧</div>
+<div class="gallery1">
+<p>sa1</p>
+  <% @galleries.each do |gallery| %>
+    <%= image_tag gallery.image.thumb300.url.to_s, class: 'image' %>
+    <%= link_to gallery.title, gallery_path(gallery.id) %>
+    <%= gallery.categories.name%>
+  <% end %>
+</div>
