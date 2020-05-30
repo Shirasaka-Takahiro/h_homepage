@@ -21,11 +21,6 @@
        <%= f.text_area :content, class: 'form-control', placeholder: "内容を記述" %>
      </div>
      <div>
-       <%= f.label :category %>
-       <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |category| %> 
-      <%= category.label do %>
-        <%= category.check_box %>
-        <%= category.text %>
       <% end %>
     <% end %>
      </div>
