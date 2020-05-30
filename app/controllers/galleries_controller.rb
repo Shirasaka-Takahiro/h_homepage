@@ -30,7 +30,7 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find_by(params[:id])
+    @gallery = Gallery.find(params[:id])
     @gallery.destroy
     flash[:notice] = "#{@gallery.title}を削除しました"
     redirect_to galleries_path   
@@ -39,7 +39,7 @@ class GalleriesController < ApplicationController
   private
   
   def gallery_params
-    params.require(:gallery).permit(:title, :content, :image, category_ids: [])
+    params.require(:gallery).permit(:title, :content, :image, :category_ids)
   end
 
 end
