@@ -20,6 +20,10 @@
        <%= f.label :content %>
        <%= f.text_area :content, class: 'form-control', placeholder: "内容を記述" %>
      </div>
+     <div class="form-group">
+       <%= f.label :tag_list %>
+       <%= f.text_field :tag_list, value: @gallery.tag_list.join(','), class: 'form-control' %>
+     </div>
     <div>
       <div>
        <%= f.submit '投稿', class: 'btn btn-primary' %>

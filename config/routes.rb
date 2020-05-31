@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'categories/new'
   get 'categories/show'
-  resources :galleries  
+  resources :galleries
 
   root 'home#index'
 
@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get 'works/index'
  
   get 'abouts/show'
+
 
 end

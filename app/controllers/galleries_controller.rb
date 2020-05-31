@@ -1,6 +1,11 @@
 class GalleriesController < ApplicationController
   def index
     @galleries = Gallery.all
+
+    if params[:tag_name]
+       @galleries = Gallery.tagged_with("#{params[:tag_name]}")
+    end
+
   end
 
   def show
@@ -36,10 +41,11 @@ class GalleriesController < ApplicationController
     redirect_to galleries_path   
   end
 
+
   private
   
   def gallery_params
-    params.require(:gallery).permit(:title, :content, :image)
+    params.require(:gallery).permit(:title, :content, :image, :tag_list)
   end
 
 end
