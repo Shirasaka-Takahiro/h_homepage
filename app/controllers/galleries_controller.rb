@@ -5,7 +5,13 @@ class GalleriesController < ApplicationController
     if params[:tag_name]
        @galleries = Gallery.tagged_with("#{params[:tag_name]}")
     end
+  end
 
+  def tag
+    @galleries = Gallery.tagged_with(params[:name])
+    @tags = Gallery.tag_counts_on(:tags)
+    
+    render 'index'
   end
 
   def show
