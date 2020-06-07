@@ -18,5 +18,6 @@ Rails.application.routes.draw do
  
   get 'abouts/show'
 
-  #get 'tags/:tag', to: 'galleries#index', as: :tag
+  get 'home/index'
+
 end
