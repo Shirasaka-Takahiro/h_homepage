@@ -27,6 +27,13 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.find(params[:id])
   end
 
+  def update
+    @gallery = Gallery.find(params[:id])
+    @gallery.update!(gallery_params)
+    flash[:notice] = "#{@gallery.title}を更新しました"
+    redirect_to galleries_url
+  end
+
   def create
 
     @gallery = current_user.galleries.build(gallery_params)
