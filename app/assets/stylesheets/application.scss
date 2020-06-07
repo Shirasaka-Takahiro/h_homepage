@@ -46,3 +46,25 @@ $sp: 480px;  // smartphone
 .css4 { font-size: 1.6em; }
 
 // image
+
+//carousel
+
+#carousel {
+  margin: 30px 30% 10px 30%;
+
+  .carousel-inner {
+     
+    .carousel-item {
+      width: 100%;
+      max-height: 600px !important;
+    }
+
+  }
+
+}
+
+//intro
+
+.intro {
+  text-align: center;
+}
