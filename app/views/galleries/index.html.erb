@@ -1,19 +1,17 @@
 <h1>Galleries#index</h1>
-<div>作品一覧</div>
+<h3 class="tag_list text-center">タグ一覧</h3>
 <div class="tag_cloud">
-  <%= link_to '全て表示', [:galleries] %>
     <% tag_cloud(Gallery.tag_counts_on(:tags), %w(css1 css2 css3 css4)) do |tag, css_class| %>
-  <%= link_to tag.name, { :action => :tag, :name => tag.name }, :class => css_class %>
+  <div class="tag_detail"><%= link_to tag.name, { :action => :tag, :name => tag.name }, :class => css_class %></div>
   <% end %>
 </div>
-<div class="container">
-  <div class="gallery_index">
-    <% @galleries.each do |gallery| %>
-      <%= image_tag gallery.image.thumb300.url.to_s, class: 'image' %>
-        <div class="gallery_detail">
-          <%= link_to gallery.title, gallery_path(gallery.id) %>
-          <%= render :partial => 'tag_list', locals: { tag_list: gallery.tag_list } %>
-        </div>
-     <% end %>
-  </div>
+<h3 class="gallery_list text-center">作品一覧</h3>
+<div class="gallery">
+  <% @galleries.each do |gallery| %>
+    <ul>
+      <li><%= image_tag gallery.image.thumb300.url.to_s, class: 'image' %></li>
+      <li><%= link_to gallery.title, gallery_path(gallery.id) %></li>
+      <li><%= render :partial => 'tag_list', locals: { tag_list: gallery.tag_list } %></li>
+    </ul>
+  <% end %>
 </div>

@@ -45,6 +45,15 @@ $sp: 480px;  // smartphone
 .css3 { font-size: 1.4em; }
 .css4 { font-size: 1.6em; }
 
+.tag_cloud {
+  display: flex;
+  justify-content: center;
+  .tag_detail {
+    margin: 10px;
+  }
+
+}
+
 // image
 
 //carousel
@@ -71,16 +80,16 @@ $sp: 480px;  // smartphone
 
 //gallery_index
 
-.gallery_index {
-  margin: 3%;
-  
-  .gallery_detail {
+.gallery {
+  margin:2% 1% 2% 0;
+  display: flex;
+  flex-wrap: wrap;
+ 
+  li {
+    list-style: none;
   }
 
 }
-
-
-
 
 
 
