@@ -1,4 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<div><%= link_to "新規投稿", new_gallery_path, class: 'btn' %></div>
-<%= @galleries.count %>
+<div class="mypage">
+<h1>マイページ</h1>
+  <div class="counts">
+    <p>現在の作品集:  <%= @galleries.count %></p>
+  </div>
+  <div class="new_gallery">
+    <%= link_to "新規投稿", new_gallery_path, class: 'btn btn-primary' %>
+  </div>
+</div>
