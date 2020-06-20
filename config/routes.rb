@@ -1,5 +1,6 @@
 Rails.application.routes.draw do  
 
+  get 'contacts/index'
   get 'categories/new'
   get 'categories/show'
   resources :galleries do
