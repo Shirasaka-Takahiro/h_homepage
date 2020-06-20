@@ -56,6 +56,16 @@ $sp: 480px;  // smartphone
 
 // image
 
+//list
+
+ li {
+    list-style: none;
+  }
+
+//table
+
+  table, th {border-style:none!important;}
+
 //carousel
 
 #carousel {
@@ -84,16 +94,14 @@ $sp: 480px;  // smartphone
   margin:2% 1% 2% 0;
   display: flex;
   flex-wrap: wrap;
- 
-  li {
-    list-style: none;
-  }
-
 }
 
 //gallery_show
 
+.gallery_show {
+  text-align: center;
 
+}
 
 
 

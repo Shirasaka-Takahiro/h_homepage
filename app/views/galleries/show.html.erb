@@ -1,12 +1,21 @@
-<h1>Galleries#show</h1>
 <h1>作品詳細</h1>
 <div class="gallery_show">
 <%= link_to '作品一覧へ', galleries_path, class: 'btn btn-primary' %>
-作品NO.<%= @gallery.id %>
-<%= @gallery.title %>
-<%= @gallery.content %>
-<%= image_tag @gallery.image_url, class: "image" %>
-<%= render :partial => 'tag_list', locals: { tag_list: @gallery.tag_list } %>
-<%= link_to "削除", @gallery, method: :delete, data:{ confirm: "削除してもよろしいですか？" }, class: "btn btn-danger" if signed_in? %>
-<%= link_to "編集", edit_gallery_path(@gallery), class: "btn btn-success" if signed_in? %>
+  <table class="table">
+    <thead>
+      <tr><th><%= image_tag @gallery.image_url, class: "image" %></th></tr>
+    </thead>
+    <tbody>
+    <tr><th>作品NO.<%= @gallery.id %></th></tr>
+    <tr><th>タイトル:  <%= @gallery.title %></th></tr>
+    <tr><th>作品内容:  <%= @gallery.content %></th></tr>
+    <tr><th>タグ:  <%= render :partial => 'tag_list', locals: { tag_list: @gallery.tag_list } %></th></tr>
+    <tr><th>
+      <div class="edit_delete_btn">
+        <%= link_to "削除", @gallery, method: :delete, data:{ confirm: "削除してもよろしいですか？" }, class: "btn btn-danger" if signed_in? %>
+        <%= link_to "編集", edit_gallery_path(@gallery), class: "btn btn-success" if signed_in? %>
+      </div>
+    </th></tr>
+    </tbody>
+  </table>
 </div>
