@@ -75,3 +75,4 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem "rack", ">= 2.2.3"
