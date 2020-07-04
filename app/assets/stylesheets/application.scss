@@ -16,6 +16,7 @@
 
 @import "bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
 
 // media queli
 $pc: 1024px; // PC
@@ -38,6 +39,7 @@ $sp: 480px;  // smartphone
     }
 }
 
+
 // tags css
 
 .css1 { font-size: 1.0em; }
@@ -55,6 +57,28 @@ $sp: 480px;  // smartphone
 }
 
 // image
+
+// nav
+
+$text-color: white;
+
+nav {
+
+.navbar-brand {
+  font-size: 40px;
+  color: $text-color;
+}
+
+.nav-item {
+  font-size: 20px;
+  color: $text-color;
+}
+
+
+}
+
+
+//nav
 
 //list
 

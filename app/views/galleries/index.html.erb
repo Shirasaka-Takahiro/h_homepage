@@ -9,7 +9,7 @@
 <div class="gallery">
   <% @galleries.each do |gallery| %>
     <ul>
-      <li><%= image_tag gallery.image.thumb300.url.to_s, class: 'image' %></li>
+      <li><%= image_tag gallery.image.thumb100.url.to_s, class: 'image' %></li>
       <li><%= link_to gallery.title, gallery_path(gallery.id) %></li>
       <li><%= render :partial => 'tag_list', locals: { tag_list: gallery.tag_list } %></li>
     </ul>
